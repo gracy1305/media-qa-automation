@@ -2,18 +2,18 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
-# Open Chrome browser
+# Opens Chrome browser
 driver = webdriver.Chrome()
 
-# Open your local page (use Go Live URL)
+# Opens your local page
 driver.get("http://127.0.0.1:5500/media-qa-demo/index.html")
 
-# Wait for page to load
+# Waits for the page to load
 time.sleep(3)
 
 print("Page loaded successfully")
 
-# Find the video element
+# Finds the video element
 video = driver.find_element(By.ID, "mediaPlayer")
 
 assert video is not None
@@ -27,11 +27,11 @@ print("Video started playing")
 
 time.sleep(3)
 
-# Pause video
+# Pause the video
 driver.execute_script("arguments[0].pause();", video)
 print("Video paused successfully")
 
-# Wait before closing
+# Waits before closing
 time.sleep(2)
 
 driver.quit()
