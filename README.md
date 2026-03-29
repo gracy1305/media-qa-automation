@@ -28,10 +28,14 @@ This project simulates a real-world QA automation flow by launching a browser, l
 ## How to Run
 
 1. Install dependencies:
-```pip install selenium```
+```bash
+pip install selenium
+```
 2. Open your project in VS Code and start Live Server for `index.html`
 3. Run the script:
-```python test_media.py```
+```bash
+python test_media.py
+```
 4. The browser will open and automatically:
   - Load the page
   - Play the video
